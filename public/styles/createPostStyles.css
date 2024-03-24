@@ -1,0 +1,67 @@
+/*Variables*/
+:root {
+    --main-blue-light: #1AABE1;
+    --main-white: white;
+    --bg-blue-light: #DFF5FF;
+    --blue-dark: #192742;
+    --web-bigtext: 36px;
+    --mobile-bigtext: 20px;
+    --web-normaltext: 20px;
+    --web-subtitles: 26px;
+    --mobile-normaltext: 16px;
+}
+.main-container {
+    height: 100%;
+    background-image: url('/images/bg_img.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.createPost-container {
+    background-color: var(--bg-blue-light);
+    border-radius: 15px;
+    margin-top: 20px;
+    height: auto;
+    
+    padding: 0 50px;
+}
+.createPost-container h2{
+    font-size: var(--web-bigtext);
+    color: var(--main-blue-light);
+    margin-top: 30px;
+}
+.createPost-container label{
+    color: var(--blue-dark);
+    font-size: var(--web-subtitles);
+    font-weight: 600;
+}
+
+.createPost-container button{
+    background-color: #114232 ;
+    color: var(--main-white);
+    font-size: var(--web-subtitles);
+    width: 280px;
+    border-radius: 15px;
+    margin: auto;
+}
+
+#inputContenido {
+    max-height: 100%;
+}
+
+.createPost-container .btn-cancelar {
+    background-color: #E72929;
+}
+
+@media (max-width: 578px) {
+    .createPost-container h2{
+        font-size: var(--mobile-bigtext);
+    }
+}
+
+/*EDITPOST.EJS*/
+.createPost-container img{
+    max-height: 180px;
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}

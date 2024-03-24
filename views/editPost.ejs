@@ -1,0 +1,30 @@
+<%- include("partials/header_web.ejs") %>
+
+<section class="main-container fluid-container justify-content-center d-flex">
+    <div class="createPost-container fluid-container col-10 col-md-8 container">
+        <h2>Editar post</h2>
+        <form action="/submit-editPost?id=<%= currentPost.postId %>" method="post" enctype="multipart/form-data">
+            <label for="postTitulo" class="form-label">Titulo del post:</label>
+            <input type="text" class="form-control mb-3" name="postTitulo" placeholder="Escriba el titulo para el post" required value="<%= currentPost.titulo %>">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="<%= currentPost.imagen %>" alt="" class="src">
+                </div>
+            </div>
+            <label for="postImagen" class="form-label">Cambiar imagen de portada:</label>
+            <input type="file" class="form-control mb-3" name="postImagen" accept="image/*">
+
+            <label for="postContenido" class="form-label">Contenido:</label>
+            <textarea rows="15" id="inputContenido" class="form-control mb-3" name="postContenido" placeholder="Escriba aquí el cuerpo del blog..." required><%= currentPost.contenido%></textarea>
+
+            
+            <div class="row justify-content-center">
+                <button class="btn" type="submit">Guardar cambios</button>
+                <button class="btn btn-cancelar" ><a href="/">Cancelar</a></button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<link rel="stylesheet" href="/styles/createPostStyles.css">

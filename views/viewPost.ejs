@@ -1,0 +1,23 @@
+<%- include("partials/header_web.ejs") %>
+
+<section class="main-container fluid-container d-flex justify-content-center">
+    <div class="viewPost-container fluid-container col-10 col-md-8 container">
+        <div class="row">
+            <h2><%= locals.currentPost.titulo %></h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <img src=" <%= locals.currentPost.imagen %>" alt="">
+            </div>
+            <div class="col-lg-7">
+                <p><%= locals.currentPost.contenido %></p>
+            </div>
+        </div>
+        <div class="fluid-container d-flex justify-content-center justify-content-evenly">
+                <a href="/edit-post?id=<%= locals.currentPost.postId %>" class="btn btn-editar">Editar</a>
+                <a href="/delete-post?id=<%= locals.currentPost.postId %>" class="btn btn-eliminar">Eliminar</a>
+        </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="/styles/viewPostStyles.css">

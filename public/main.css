@@ -1,0 +1,110 @@
+/*Variables*/
+:root {
+    --main-blue-light: #1AABE1;
+    --main-white: white;
+    --bg-blue-light: #DFF5FF;
+    --web-bigtext: 36px;
+    --mobile-bigtext: 20px;
+    --web-normaltext: 20px;
+    --mobile-normaltext: 16px;
+}
+/*header_web.ejs*/
+body{
+    font-family: 'Poppins';
+    height: 100vh;
+}
+.navbar_web {
+    height: 120px;
+    background-color: var(--main-blue-light);
+    color: var(--main-white);
+    padding-left: 25px;
+}
+.img-container img{
+    height: 120px;
+}
+/*index.ejs*/
+.header_web{
+    position: fixed;
+    width: 100%;
+}
+.main-container {
+    height: 100%;
+    background-image: url('/images/bg_img.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-container{
+    padding-top: 80px;
+}
+.form-container h2{
+    color: var(--main-white);
+}
+.form-container button{
+    background-color: #FDA403;
+    color: var(--main-white);
+    width: 300px;
+    font-size: var(--web-normaltext);
+    font-weight: 500;
+}
+.form-container button:hover{
+    color: var(--main-white);
+    background-color: #FFCF81;
+}
+.posts-title {
+    font-size: var(--web-bigtext);
+}
+
+.post-container {
+    background-color: var(--bg-blue-light);
+    border-radius: 15px;
+    margin: 30px 0;
+    max-height: 250px;
+    overflow: hidden;
+    padding-right: 20px;
+}
+.post-container h2{
+    color: var(--main-blue-light);
+    font-size: var(--web-bigtext);
+    margin-top: 25px;
+}
+.post-container p{
+    color: black;
+    font-size: var(--web-normaltext);
+}
+
+.img-post-container {
+    width: 250px;
+    border-radius: 15px;
+}
+.post-container-link{
+    text-decoration: none;
+}
+button a, button a:hover{
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+.text-container p{
+    white-space: normal;
+}
+
+@media (max-width: 768px) {
+    .img-post-container{
+        width: 120px;
+    }
+    .post-container h2{
+        font-size: var(--mobile-bigtext);
+    }
+    .post-container p{
+        font-size: var(--mobile-normaltext);
+    }
+}
+
+@media (max-width: 576px) {
+    .posts-title{
+        display: none;
+    }
+    .form-container button{
+        width: 100%;
+    }
+}

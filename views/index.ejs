@@ -1,0 +1,40 @@
+    <%- include('./partials/header_web.ejs') %>
+
+<section class="main-container fluid-container">
+    <div class="form-container container-xxl">
+        <div class="row">
+            <div class="col-md-11 d-flex justify-content-between">
+                <h2 class="posts-title">Post recientes | Todos</h2>
+                <button class="btn"><a href="/create-post">Crear nuevo post</a></button>
+            </div>
+        </div>
+        <div class="row align-items-center d-flex">
+            <div class="col-md-11">
+                <!-- Evalua si el arreglo está vacío -->
+                <% if(locals.postsArray[0]) {%>
+                    <% locals.postsArray.forEach(post => { %>
+                        <a  class="post-container-link" href="/view-post?id=<%= post.postId %>">
+                        <div class="post-container container d-flex">
+                            
+                                <div class="col-sm-4 col-md-3 align-self-center">
+                                    <img class="img-post-container" src="<%= post.imagen %>" alt="Post Image">
+                                </div>
+                                <div class="col-sm-8 col-md-9">
+                                    <div class="row">
+                                        <h2> <%= post.titulo %></h2>
+                                    </div>
+                                    <div class="text-container fluid-container">
+                                        <p class="text"> <%= post.contenido %> </p> 
+                                    </div>
+                                </div>
+                        </div>
+                        </a>
+                    <% }); %>
+                <% } else { %>
+                    <h2>No hay publicaciones recientes</h2>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+</section>

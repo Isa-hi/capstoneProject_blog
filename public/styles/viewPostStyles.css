@@ -1,0 +1,52 @@
+:root {
+    --main-blue-light: #1AABE1;
+    --main-white: white;
+    --bg-blue-light: #DFF5FF;
+    --blue-dark: #192742;
+    --web-bigtext: 36px;
+    --mobile-bigtext: 20px;
+    --web-normaltext: 20px;
+    --web-subtitles: 26px;
+    --mobile-normaltext: 16px;
+}
+.main-container {
+    min-height: 100%;
+    height: auto;
+    background-image: url('/images/bg_img.jpeg');
+    background-repeat: repeat-;
+    background-size: cover;
+}
+.viewPost-container {
+    background-color: var(--bg-blue-light);
+    border-radius: 15px;
+    margin-top: 50px;
+    min-height: 500px;
+    height: auto;
+    padding: 50px;
+}
+
+.viewPost-container h2{
+    font-size: var(--web-bigtext);
+    color: var(--main-blue-light);
+    margin-bottom: 20px;
+}
+.viewPost-container img{
+    max-width: 300px;
+    border-radius: 15px;
+}
+.viewPost-container p{
+    font-size: var(--web-normaltext);
+}
+
+.viewPost-container .btn {
+    font-size: var(--web-normaltext);
+    color: var(--main-white);
+    border-radius: 15px;
+    width: 180px;
+}
+.viewPost-container .btn-editar{
+    background-color: #FDA403;
+}
+.viewPost-container .btn-eliminar{
+    background-color: #E72929;
+}
